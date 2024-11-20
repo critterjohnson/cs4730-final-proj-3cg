@@ -10,6 +10,8 @@ public class BallControl : MonoBehaviour
 
     private bool isHolding = true;   // Whether the player is holding the ball
 
+    public Rigidbody2D PlayerRB;
+
     void Update()
     {
         if (isHolding)
@@ -39,8 +41,9 @@ public class BallControl : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.velocity = Vector2.zero;
-            float angle = 45f; // Change this to your desired angle
+            float angle = PlayerRB.velocity.x < 0 ? 135f : 45f; // Change this to your desired angle
             Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.right;
+
             // Apply force upwards
             rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
         }
