@@ -314,6 +314,7 @@ MonoBehaviour:
   launchForce: 10
   ball: {fileID: 1424418823}
   holdPoint: {fileID: 1295142014}
+  sr: {fileID: 1424418826}
   PlayerRB: {fileID: 479979702}
 --- !u!1 &519420028
 GameObject:
