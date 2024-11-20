@@ -225,6 +225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 479979702}
   movementSpeed: 10
+  jumpVelocity: 20
+  sr: {fileID: 479979698}
 --- !u!50 &479979702
 Rigidbody2D:
   serializedVersion: 4
@@ -240,7 +242,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -312,6 +314,7 @@ MonoBehaviour:
   launchForce: 10
   ball: {fileID: 1424418823}
   holdPoint: {fileID: 1295142014}
+  PlayerRB: {fileID: 479979702}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
