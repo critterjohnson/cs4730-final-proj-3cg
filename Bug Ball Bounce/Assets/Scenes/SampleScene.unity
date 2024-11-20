@@ -284,7 +284,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.24613309, y: -0.061533272}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -295,7 +295,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.45, y: 3}
+  m_Size: {x: 2.9577336, y: 2.2616005}
   m_EdgeRadius: 0
 --- !u!114 &479979704
 MonoBehaviour:
@@ -306,10 +306,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 479979697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 170c020026c182243a04cf333ae46bd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 35bed11ed9fa04c069b0b189ac9e24b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchForce: 8
+  launchForce: 10
   ball: {fileID: 1424418823}
   holdPoint: {fileID: 1295142014}
 --- !u!1 &519420028
@@ -856,7 +856,7 @@ Transform:
   m_GameObject: {fileID: 1295142013}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0052590915, y: -0, z: -0, w: 0.9999862}
-  m_LocalPosition: {x: 2.92, y: 2.45, z: 0}
+  m_LocalPosition: {x: 2.29, y: 1.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -897,7 +897,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f3221403149fc4a9388b72c28fa51ad7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
