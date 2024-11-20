@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 479979702}
   - component: {fileID: 479979703}
   - component: {fileID: 479979704}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1295142014}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BallHoldPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
