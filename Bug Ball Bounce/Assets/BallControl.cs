@@ -7,6 +7,7 @@ public class BallControl : MonoBehaviour
     public float launchForce = 10f;
     public GameObject ball;          // The ball GameObject
     public Transform holdPoint;      // A child of the player where the ball is "held"
+    public SpriteRenderer sr;
 
     private bool isHolding = true;   // Whether the player is holding the ball
 
@@ -14,6 +15,10 @@ public class BallControl : MonoBehaviour
 
     void Update()
     {
+        if (!sr.isVisible) {
+            isHolding = true;
+        }
+
         if (isHolding)
         {
             // Keep the ball at the hold point
