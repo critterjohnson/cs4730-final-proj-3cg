@@ -12,11 +12,13 @@ public class BallControl : MonoBehaviour
     private bool isHolding = true;   // Whether the player is holding the ball
 
     public Rigidbody2D PlayerRB;
+    
+    public CircleCollider2D ballCollider; 
 
     void Update()
     {
         if (!sr.isVisible) {
-            isHolding = true;
+            setHolding(true);
         }
 
         if (isHolding)
@@ -34,12 +36,13 @@ public class BallControl : MonoBehaviour
 
     public void setHolding(bool h) {
         isHolding = h;
+        ballCollider.enabled = !h;
     }
 
     void ThrowBall()
     {
         // Release the ball
-        isHolding = false;
+        setHolding(false);
 
         // Detach the ball from the player
         ball.transform.parent = null;
