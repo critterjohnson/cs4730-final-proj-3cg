@@ -32,6 +32,10 @@ public class BallControl : MonoBehaviour
         }
     }
 
+    public void setHolding(bool h) {
+        isHolding = h;
+    }
+
     void ThrowBall()
     {
         // Release the ball
