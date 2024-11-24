@@ -1,63 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class BallControl : MonoBehaviour
 {
     public float launchForce = 10f;
-    public GameObject ball;          // The ball GameObject
+    public GameObject BallPrefab;          // The ball prefab GameObject
     public Transform holdPoint;      // A child of the player where the ball is "held"
-    public SpriteRenderer sr;
 
-    private bool isHolding = true;   // Whether the player is holding the ball
-
-    public Rigidbody2D PlayerRB;
+    public SpriteRenderer PlayerSR;
     
     public CircleCollider2D ballCollider; 
+    public float ScaleInc;
+    public float ScaleMin;
+    public float ScaleMax;
+
+    private GameObject holdingBall;
+
 
     void Update()
     {
-        if (!sr.isVisible) {
-            setHolding(true);
+        // if (PlayerSR.flipX) {
+        //     holdPoint.transform.position = gameObject.transform.position;
+        // }
+
+        // start roll
+        if (Input.GetKeyDown(KeyCode.E)) {
+            holdingBall = Instantiate(BallPrefab, holdPoint.transform.position, Quaternion.identity);
+            holdingBall.transform.localScale = new Vector3(ScaleMin, ScaleMin, ScaleMin);
         }
 
-        if (isHolding)
-        {
-            // Keep the ball at the hold point
-            ball.transform.position = holdPoint.position;
+        if (holdingBall != null) {
+            holdingBall.transform.position = holdPoint.transform.position;
 
-            // Check for throw input
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                ThrowBall();
+            if (holdingBall.transform.localScale.x < ScaleMax) {
+                holdingBall.transform.localScale += new Vector3(ScaleInc, ScaleInc, ScaleInc);
             }
         }
-    }
 
-    public void setHolding(bool h) {
-        isHolding = h;
-        ballCollider.enabled = !h;
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            ThrowBall();
+        }
     }
 
     void ThrowBall()
     {
-        // Release the ball
-        setHolding(false);
-
-        // Detach the ball from the player
-        ball.transform.parent = null;
-
         // Enable physics on the ball
-        Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = holdingBall.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.isKinematic = false;
             rb.velocity = Vector2.zero;
-            float angle = PlayerRB.velocity.x < 0 ? 135f : 45f; // Change this to your desired angle
+            float angle = PlayerSR.flipX ? 135f : 45f; // Change this to your desired angle
             Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.right;
 
             // Apply force upwards
             rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
         }
+
+        holdingBall = null;
     }
 }
