@@ -84,5 +84,28 @@ PrefabInstance:
     - {fileID: 594502603725442106, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5761052838838255586, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5869837874169477850}
   m_SourcePrefab: {fileID: 100100000, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
+--- !u!1 &304716239283784555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5761052838838255586, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
+  m_PrefabInstance: {fileID: 5461123375260251273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5869837874169477850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304716239283784555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e441eb7ec1a64461dab48ab8c8a9e085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hopForce: 1.2
+  hopInterval: 1.2
+  detectionRange: 5
