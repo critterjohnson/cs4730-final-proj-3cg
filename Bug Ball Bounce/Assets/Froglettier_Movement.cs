@@ -10,6 +10,7 @@ public class Froglettier_Movement : MonoBehaviour
 
     private Transform player;
     private Rigidbody2D rb;
+    private Animator animator;
     private bool charging = false;
 
     
@@ -20,6 +21,7 @@ public class Froglettier_Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
         StartCoroutine(Hop());
     }
 
@@ -53,6 +55,7 @@ public class Froglettier_Movement : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         if (player != null)
         {
+            animator.SetTrigger("Jump");
             // Calculate charge direction
             Vector2 direction = (player.position - transform.position).normalized;
             rb.AddForce(new Vector2(direction.x * 7f, 7f), ForceMode2D.Impulse);
