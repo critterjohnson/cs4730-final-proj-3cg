@@ -9,9 +9,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3057739500661712352, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057739500661712352, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2067522083, guid: 373dc199119b24c2ea6be542ce76124c, type: 3}
+      objectReference: {fileID: -1370280296, guid: 947c128bc07094e82b57b18fe3ab0b7c, type: 3}
     - target: {fileID: 5761052838838255586, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
       propertyPath: m_Name
       value: Floglettier
@@ -74,11 +78,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7805258939224547490, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.62
+      value: 1.7481482
       objectReference: {fileID: 0}
     - target: {fileID: 7805258939224547490, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.68
+      value: 2.1444445
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 594502603725442106, guid: 9cec0de57b26c4c0594a43997eafe0cb, type: 3}
@@ -106,6 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e441eb7ec1a64461dab48ab8c8a9e085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hopForce: 1.2
+  hopForce: 2.5
   hopInterval: 1.2
   detectionRange: 5
