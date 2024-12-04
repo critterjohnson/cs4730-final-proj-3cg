@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8591258205396671835}
   - component: {fileID: 3989029002579033086}
   - component: {fileID: 2077839271498719178}
-  - component: {fileID: 4969874185812590940}
   m_Layer: 0
   m_Name: test
   m_TagString: Enemy
@@ -176,7 +175,7 @@ MonoBehaviour:
   hopForce: 7
   hopInterval: 2
   hopsPerCycle: 3
-  idleTime: 4
+  idleTime: 1
 --- !u!114 &2077839271498719178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,16 +188,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630c4fb832e1a40ac83ee8a0517dfa98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4969874185812590940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761230924318590541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d61aa4f4710444dcd9183801b817b7c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flyPrefab: {fileID: 7215834199068676063, guid: 77f1c940170f640e7a5ef10d177e8e5a, type: 3}
