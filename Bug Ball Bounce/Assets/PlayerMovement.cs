@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
@@ -10,12 +11,12 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed;
     public float jumpVelocity;
     public SpriteRenderer sr;
+    public Animator animator;
     private Vector2 movementInput;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -30,9 +31,29 @@ public class PlayerMovement : MonoBehaviour
 
         rb2d.velocity = movementInput;
 
-        if (rb2d.velocity.x < 0) {
+        if (rb2d.velocity.y > 0.001f) {
+            animator.SetBool("IsJumping", true);
+        } else {
+
+            animator.SetBool("IsJumping", false);
+        }
+
+        if (rb2d.velocity.y < -0.001f) {
+            animator.SetBool("IsFalling", true);
+            Debug.Log(rb2d.velocity.y);
+        } else {
+            animator.SetBool("IsFalling", false);
+        }
+
+        if (Math.Abs(rb2d.velocity.x) > 0 && IsGrounded()) {
+            animator.SetBool("IsMoving", true);
+        } else {
+            animator.SetBool("IsMoving", false);
+        }
+
+        if (rb2d.velocity.x < 0 && !sr.flipX) {
             sr.flipX = true;
-        } else if (rb2d.velocity.x > 0) {
+        } else if (rb2d.velocity.x > 0 && sr.flipX) {
             sr.flipX = false;
         }
     }
