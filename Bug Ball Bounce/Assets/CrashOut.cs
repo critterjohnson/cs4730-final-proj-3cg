@@ -43,7 +43,6 @@ public class CrashOut : AttackChoice
 
             yield return null;
         }
-        Debug.Log("JumpAttack Finished");
       
     }
 }

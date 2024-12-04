@@ -21,6 +21,8 @@ public class KingMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         attacks = GetComponents<AttackChoice>();
+        
+        spriteRenderer.flipX = false;
       
         StartCoroutine(BossBehaviorCycle());
     }
@@ -59,18 +61,10 @@ public class KingMovement : MonoBehaviour
          
             if (player != null)
             {
-              
+
+                FlipSpriteTowardsPlayer();
                 Vector2 direction = (player.position - transform.position).normalized;
 
-           
-                if (direction.x > 0)
-                {
-                    spriteRenderer.flipX = true; // Facing right
-                }
-                else
-                {
-                    spriteRenderer.flipX = false;  // Facing left
-                }
                 
                 rb.AddForce(new Vector2(direction.x * hopForce, hopForce), ForceMode2D.Impulse);
             }
@@ -90,11 +84,31 @@ public class KingMovement : MonoBehaviour
     }
     private IEnumerator ExecuteRandomAttack()
     {
+        if (player != null)
+        {
+            // Flip sprite to face the player before attacking
+            FlipSpriteTowardsPlayer();
+        }
         // Choose a random attack and execute it
         int randomIndex = Random.Range(0, attacks.Length);
         attacks[randomIndex].Execute(transform, player);
 
         // Add a delay for the attack duration
         yield return new WaitForSeconds(idleTime);
+    }
+    private void FlipSpriteTowardsPlayer()
+    {
+        if (player != null)
+        {
+            // Determine whether to face left or right
+            if (player.position.x > transform.position.x)
+            {
+                spriteRenderer.flipX = true; // Facing right
+            }
+            else
+            {
+                spriteRenderer.flipX = false; // Facing left
+            }
+        }
     }
 }
