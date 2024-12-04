@@ -122,6 +122,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &153479355
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6592709033151776711, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_Radius
+      value: 0.7267823
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592709033151776711, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.034890175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592709033151776711, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.017445087
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.368471
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.489091
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202885927536975481, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135813058948391609, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
+      propertyPath: m_Name
+      value: ball
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2521f1e6f244b450c98e41b8d6e47cf1, type: 3}
 --- !u!1 &206215065
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +743,7 @@ Transform:
   m_GameObject: {fileID: 479979697}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.62, y: -1.93, z: 0}
+  m_LocalPosition: {x: -7.48, y: -1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -756,7 +825,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015631676, y: -0.17976558}
+  m_Offset: {x: -0.05054784, y: -0.040101588}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -767,7 +836,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4120216, y: 2.0251358}
+  m_Size: {x: 1.0628629, y: 1.7458078}
   m_EdgeRadius: 0
 --- !u!114 &479979704
 MonoBehaviour:
@@ -3373,3 +3442,4 @@ SceneRoots:
   - {fileID: 747864442}
   - {fileID: 1097538018}
   - {fileID: 206215067}
+  - {fileID: 153479355}

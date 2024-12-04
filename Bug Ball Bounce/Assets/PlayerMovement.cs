@@ -38,6 +38,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public bool IsGrounded() {
-        return Physics2D.Raycast(transform.position, -Vector2.up, 0.8f);
+        return Physics2D.Raycast(transform.position, -Vector2.up, 1f);
     }
 }
