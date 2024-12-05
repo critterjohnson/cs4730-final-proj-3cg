@@ -13,10 +13,12 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer sr;
     public Animator animator;
     private Vector2 movementInput;
+    private Boolean doubleJump;
 
     // Start is called before the first frame update
     void Start()
     {
+        doubleJump = true;
     }
 
     // Update is called once per frame
@@ -27,8 +29,11 @@ public class PlayerMovement : MonoBehaviour
         movementInput.y = rb2d.velocity.y;
         movementInput.x = Input.GetAxisRaw("Horizontal") * movementSpeed;
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) {
+        if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded() || doubleJump)) {
             movementInput.y = jumpVelocity;
+            if (IsGrounded() == false) {
+                doubleJump = false;
+            }
         }
 
         rb2d.velocity = movementInput;
@@ -56,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = true;
         } else if (rb2d.velocity.x > 0 && sr.flipX) {
             sr.flipX = false;
+        }
+
+        if (IsGrounded())
+        {
+            doubleJump = true;
         }
     }
 
