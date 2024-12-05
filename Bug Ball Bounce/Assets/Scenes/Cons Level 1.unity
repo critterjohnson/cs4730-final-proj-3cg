@@ -304,7 +304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2de05fcb07e6dc4ca0b22505ca59482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 0}
   respawnDelay: 1
 --- !u!95 &76814886
 Animator:
@@ -5570,7 +5569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0689c8405b52b38459ef40dc5b8d728f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level 2
+  sceneName: Cons Level 2
 --- !u!58 &1993033524
 CircleCollider2D:
   m_ObjectHideFlags: 0
