@@ -28,7 +28,9 @@ Use your dung balls to help Beetle Bub save Beetle Babe from Froggington!
 
 ## Amount of Content Available
 
-Amount/type of content available - Explain how many levels, what major features are available, etc, basically so we don’t miss anything you created
+There are over 8 levels which showcase the mechanics we've created so far,
+including the 4 different enemy types, the primary mechanic (ball roll), a
+lever which removes walls, and a barrier that only the ball can pass through.
 
 ## Lessons Learned
 
