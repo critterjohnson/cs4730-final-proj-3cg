@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class FallOff : MonoBehaviour
 {
-    public float fallThreshold = -50f; // Y position threshold for falling
+    public float fallThreshold = -100f; // Y position threshold for falling
 
     void Update()
     {
