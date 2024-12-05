@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Cons Level 2.unity
     guid: b76a4186652ea4975938c57ad504fcf0
   - enabled: 1
+    path: Assets/Scenes/Boss Room 1.unity
+    guid: a282ecb3383cd4a55a96321e8bd4b490
+  - enabled: 1
+    path: Assets/Scenes/Boss Room 2.unity
+    guid: d95643e44ab3c46a19fd487a2516de50
+  - enabled: 1
+    path: Assets/Scenes/Boss Room 3.unity
+    guid: e9ace393c689d47b183dee2b031bae97
+  - enabled: 1
     path: Assets/Scenes/Cons Level 1.unity
     guid: eea9d9b7bed1a48cb99e55ae28fb8ed9
   m_configObjects: {}
