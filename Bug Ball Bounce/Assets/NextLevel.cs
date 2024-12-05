@@ -19,6 +19,8 @@ public class NextLevel : MonoBehaviour
         
     }
     public void OnCollisionEnter2D(Collision2D collision) {
-        SceneManager.LoadScene(sceneName);
+        if (collision.gameObject.CompareTag("Player")) {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

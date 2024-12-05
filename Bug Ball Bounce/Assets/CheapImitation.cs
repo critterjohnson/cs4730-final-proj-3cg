@@ -10,6 +10,7 @@ public class CheapImitation : AttackChoice
 
     private bool isRolling = false;
     private Vector2 direction;
+    private Animator animator;
 
     private SpriteRenderer spriteRenderer;
     private Transform bossTransform;
@@ -17,6 +18,7 @@ public class CheapImitation : AttackChoice
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         bossTransform = transform;
     }
 
@@ -40,6 +42,7 @@ public class CheapImitation : AttackChoice
         }
       
         isRolling = true;
+        animator.SetBool("IsRolling", true);
 
         float elapsedTime = 0f;
 
@@ -56,6 +59,7 @@ public class CheapImitation : AttackChoice
         }
         
         isRolling = false;
+        animator.SetBool("IsRolling", false);
         
         bossTransform.rotation = Quaternion.identity;
         
