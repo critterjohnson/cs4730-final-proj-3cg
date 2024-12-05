@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 809236386}
   - component: {fileID: 809236385}
   - component: {fileID: 809236384}
+  - component: {fileID: 809236387}
   m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -244,7 +245,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: play again?
+  m_text: 'play again?
+
+    Press Space'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -377,6 +380,19 @@ RectTransform:
   m_AnchoredPosition: {x: 3.73, y: 0.59}
   m_SizeDelta: {x: 10.5825, y: 2.668}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &809236387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809236383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92421a60e7defa647a604878db3d6838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScene: Level 2
 --- !u!1 &1022303882
 GameObject:
   m_ObjectHideFlags: 0
