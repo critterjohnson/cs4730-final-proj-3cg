@@ -8,14 +8,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 995095842714568111}
-  - component: {fileID: 3741800856485195143}
-  - component: {fileID: 3753808540591200811}
-  - component: {fileID: -8312085075050815436}
-  - component: {fileID: 3246859318134989977}
-  - component: {fileID: 316214536732219832}
-  - component: {fileID: 4219310123758192002}
-  - component: {fileID: 3660308671323109830}
+  - component: {fileID: 8004352467286605309}
+  - component: {fileID: 4647779070713528781}
+  - component: {fileID: 6832535154217326839}
+  - component: {fileID: 9217996468254338731}
+  - component: {fileID: 2977537889881377426}
+  - component: {fileID: 9180284247665622291}
+  - component: {fileID: 8387953437217377009}
+  - component: {fileID: 8190393865438328144}
+  - component: {fileID: 4370940035579735019}
+  - component: {fileID: 8842435066068799012}
+  - component: {fileID: 2286411326784199379}
   m_Layer: 0
   m_Name: Boss 1
   m_TagString: Enemy
@@ -190,7 +193,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630c4fb832e1a40ac83ee8a0517dfa98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4219310123758192002
+--- !u!114 &8387953437217377009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416160571573218102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61aa4f4710444dcd9183801b817b7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyPrefab: {fileID: 3979868437125844364, guid: 7fae585762dd449d48ca51a97a8ce816, type: 3}
+--- !u!114 &8190393865438328144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416160571573218102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b02bb0064ce4d36bb9103be3875a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollSpeed: 10
+  rollDuration: 3
+  rotationSpeed: 720
+--- !u!114 &4370940035579735019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
