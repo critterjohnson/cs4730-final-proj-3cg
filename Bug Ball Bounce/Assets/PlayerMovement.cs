@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(IsGrounded());
+
         movementInput.y = rb2d.velocity.y;
         movementInput.x = Input.GetAxisRaw("Horizontal") * movementSpeed;
 
@@ -58,6 +60,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public bool IsGrounded() {
-        return Physics2D.Raycast(transform.position, -Vector2.up, 1f);
+        return Physics2D.Raycast(transform.position, -Vector2.up, 0.8f);
     }
 }
