@@ -38,8 +38,6 @@ public class Froglettier_Movement : MonoBehaviour
         } else {
             animator.SetBool("IsFalling", false);
         }
-
-        Debug.Log(animator.GetBool("IsRising"));
     }
 
     private IEnumerator Hop()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class FlySpawn : AttackChoice
@@ -8,6 +9,9 @@ public class FlySpawn : AttackChoice
 
     public override void Execute(Transform bossTransform, Transform playerTransform)
     {
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger("IsBurping");
+
         GameObject fly = Instantiate(flyPrefab, bossTransform.position, Quaternion.identity);
         
         SpriteRenderer bossSprite = bossTransform.GetComponent<SpriteRenderer>();

@@ -15,6 +15,8 @@ public class KingMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer; 
     private bool isHopping = false;  
     private AttackChoice[] attacks;
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +27,22 @@ public class KingMovement : MonoBehaviour
         spriteRenderer.flipX = false;
       
         StartCoroutine(BossBehaviorCycle());
+
+        animator = GetComponent<Animator>();
+    }
+
+    private void Update() {
+        if (rb.velocity.y > 0.01f) {
+            animator.SetBool("IsRising", true);
+        } else {
+            animator.SetBool("IsRising", false);
+        }
+
+        if (rb.velocity.y < -0.001f) {
+            animator.SetBool("IsFalling", true);
+        } else {
+            animator.SetBool("IsFalling", false);
+        }
     }
 
     private IEnumerator BossBehaviorCycle()
