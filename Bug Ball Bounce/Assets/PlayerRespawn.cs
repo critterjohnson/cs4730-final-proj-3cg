@@ -1,23 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    public Transform respawnPoint; // Assign in the Inspector or set dynamically.
     public float respawnDelay = 1f; // Delay before respawning.
-    private Vector3 startPosition;
-
-    void Start()
-    {
-        // Initialize the start position in case no respawn point is assigned.
-        startPosition = transform.position;
-
-        if (respawnPoint == null)
-            respawnPoint = new GameObject("Default Respawn Point").transform;
-
-        respawnPoint.position = startPosition;
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -38,7 +26,7 @@ public class PlayerRespawn : MonoBehaviour
 
     void Respawn()
     {
-        transform.position = respawnPoint.position; // Move to respawn point.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         gameObject.SetActive(true); // Re-enable player.
     }
 }
