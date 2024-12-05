@@ -12,6 +12,7 @@ public class Froglettier_Movement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private bool charging = false;
+    private bool isFacingLeft = false;
 
     
     //movement
@@ -54,6 +55,10 @@ public class Froglettier_Movement : MonoBehaviour
                 else
                 {
                     Vector2 direction = (player.position - transform.position).normalized;
+                    if ((direction.x > 0 && !isFacingLeft) || (direction.x < 0 && isFacingLeft))
+                    {
+                        FlipSprite();
+                    }
                     rb.AddForce(new Vector2(direction.x * hopForce, hopForce), ForceMode2D.Impulse);
                     yield return new WaitForSeconds(hopInterval);
                 }
@@ -77,6 +82,10 @@ public class Froglettier_Movement : MonoBehaviour
             // Calculate charge direction
             Vector2 direction = (player.position - transform.position).normalized;
             animator.SetBool("IsCharging", false);
+            if ((direction.x > 0 && !isFacingLeft) || (direction.x < 0 && isFacingLeft))
+            {
+                FlipSprite();
+            }
             rb.AddForce(new Vector2(direction.x * 7f, 7f), ForceMode2D.Impulse);
         }
 
@@ -85,5 +94,12 @@ public class Froglettier_Movement : MonoBehaviour
         yield return new WaitForSeconds(1f); // Adjust this time based on how long the charge should last
 
         charging = false;
+    }
+    private void FlipSprite()
+    {
+        isFacingLeft = !isFacingLeft;
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1; // Flip the x-scale
+        transform.localScale = localScale;
     }
 }

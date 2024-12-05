@@ -10,12 +10,16 @@ public class FlySpawn : AttackChoice
     {
         GameObject fly = Instantiate(flyPrefab, bossTransform.position, Quaternion.identity);
         
-        SpriteRenderer flySprite = fly.GetComponent<SpriteRenderer>();
         SpriteRenderer bossSprite = bossTransform.GetComponent<SpriteRenderer>();
+        FlyMovement flyMovement = fly.GetComponent<FlyMovement>();
 
-        if (flySprite != null && bossSprite != null)
+        if (bossSprite != null && flyMovement != null)
         {
-            flySprite.flipX = bossSprite.flipX;
+            // Determine the fly's movement direction based on the boss's flipX state
+            int moveDirection = bossSprite.flipX ? -1 : 1; // 1 = right, -1 = left
+
+            // Set the fly's movement direction
+            flyMovement.SetMoveDirection(moveDirection);
         }
     }
 }
